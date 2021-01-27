@@ -5,20 +5,20 @@ from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 
 keys = {
-    'CONSUMER_API_KEY': 'hOj4cPqpUhQXlUB5ZGrm2vcqk',
-    'CONSUMER_API_SECRET_KEY': 'oTDHpFYu6wkLTts43qmEc7KWEXqEE2FHOlO6tocNQOm0uGmxtq',
-    'ACCESS_TOKEN': '1348259212627898369-jQ2MepOVAxqaQ54xPqMsOuvvOd2EKP',
-    'ACCESS_TOKEN_SECRET': 'cWtzgcDatYSWv5NnaPfIcHA4i03lN4DegQF9jSUwRo9U1'
+    'CONSUMER_API_KEY': '',
+    'CONSUMER_API_SECRET_KEY': '',
+    'ACCESS_TOKEN': '',
+    'ACCESS_TOKEN_SECRET': ''
 }
 
-genius = lyricsgenius.Genius("-ld3wmIcHiw63flOt-QtzRZ28fLu_S8TxUPtMOQoP17Cdx3SF-q_x5oZBSIcSo1O")
+genius = lyricsgenius.Genius("")
 artist = genius.search_artist("The Local Train")
 #print(artist.songs)
 
 all_songs = ["Choo Lo","Dilnawaz","Aaftaab", "Dil Mere", "Aaoge Tum Kabhi", "Khudi","Mere Yaar","Vaaqif","Aakhri Salaam","Bandey","Mizaaj","Yeh Zindagi Hai","Gustaakh","Kaisey Jiyun","Manzil","Ye Zindagi Hai"]
 
 def get_raw_lyrics():
-    genius_client_access_token = "-ld3wmIcHiw63flOt-QtzRZ28fLu_S8TxUPtMOQoP17Cdx3SF-q_x5oZBSIcSo1O"
+    genius_client_access_token = ""
     genius = lyricsgenius.Genius(genius_client_access_token)
     random_song_title = random.choice(all_songs)
     lyrics = genius.search_song(random_song_title, "The Local Train").lyrics
